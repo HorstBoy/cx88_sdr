@@ -1,0 +1,108 @@
+v4l2-compliance SHA: not available, 64 bits
+
+Compliance test for cx88_sdr device /dev/swradio0:
+
+Driver Info:
+	Driver name      : cx88_sdr
+	Card type        : CX2388x SDR
+	Bus info         : PCI:0000:05:00.0
+	Driver version   : 5.6.0
+	Capabilities     : 0x81300000
+		SDR Capture
+		Read/Write
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x01300000
+		SDR Capture
+		Read/Write
+		Extended Pix Format
+
+Required ioctls:
+	test VIDIOC_QUERYCAP: OK
+
+Allow for multiple opens:
+	test second /dev/swradio0 open: OK
+	test VIDIOC_QUERYCAP: OK
+	test VIDIOC_G/S_PRIORITY: OK
+	test for unlimited opens: OK
+
+Debug ioctls:
+	test VIDIOC_DBG_G/S_REGISTER: OK (Not Supported)
+	test VIDIOC_LOG_STATUS: OK
+
+Input ioctls:
+	test VIDIOC_G/S_TUNER/ENUM_FREQ_BANDS: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_S_HW_FREQ_SEEK: OK (Not Supported)
+	test VIDIOC_ENUMAUDIO: OK (Not Supported)
+	test VIDIOC_G/S/ENUMINPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDIO: OK (Not Supported)
+	Inputs: 0 Audio Inputs: 0 Tuners: 0
+
+Output ioctls:
+	test VIDIOC_G/S_MODULATOR: OK (Not Supported)
+	test VIDIOC_G/S_FREQUENCY: OK (Not Supported)
+	test VIDIOC_ENUMAUDOUT: OK (Not Supported)
+	test VIDIOC_G/S/ENUMOUTPUT: OK (Not Supported)
+	test VIDIOC_G/S_AUDOUT: OK (Not Supported)
+	Outputs: 0 Audio Outputs: 0 Modulators: 0
+
+Input/Output configuration ioctls:
+	test VIDIOC_ENUM/G/S/QUERY_STD: OK (Not Supported)
+	test VIDIOC_ENUM/G/S/QUERY_DV_TIMINGS: OK (Not Supported)
+	test VIDIOC_DV_TIMINGS_CAP: OK (Not Supported)
+	test VIDIOC_G/S_EDID: OK (Not Supported)
+
+Control ioctls:
+		info: checking v4l2_queryctrl of control 'User Controls' (0x00980001)
+		info: checking v4l2_queryctrl of control 'Gain' (0x00980913)
+		info: checking v4l2_queryctrl of control 'Input' (0x00982810)
+		info: checking v4l2_queryctrl of control 'Sampling Rate' (0x00982811)
+		info: checking v4l2_queryctrl of control 'Gain' (0x00980913)
+		info: checking v4l2_queryctrl of control 'Input' (0x08000000)
+		info: checking v4l2_queryctrl of control 'Sampling Rate' (0x08000001)
+	test VIDIOC_QUERY_EXT_CTRL/QUERYMENU: OK
+	test VIDIOC_QUERYCTRL: OK
+		info: checking control 'User Controls' (0x00980001)
+		info: checking control 'Gain' (0x00980913)
+		info: checking control 'Input' (0x00982810)
+		info: checking control 'Sampling Rate' (0x00982811)
+	test VIDIOC_G/S_CTRL: OK
+		info: checking extended control 'User Controls' (0x00980001)
+		info: checking extended control 'Gain' (0x00980913)
+		info: checking extended control 'Input' (0x00982810)
+		info: checking extended control 'Sampling Rate' (0x00982811)
+	test VIDIOC_G/S/TRY_EXT_CTRLS: OK
+		info: checking control event 'User Controls' (0x00980001)
+		info: checking control event 'Gain' (0x00980913)
+		info: checking control event 'Input' (0x00982810)
+		info: checking control event 'Sampling Rate' (0x00982811)
+	test VIDIOC_(UN)SUBSCRIBE_EVENT/DQEVENT: OK
+	test VIDIOC_G/S_JPEGCOMP: OK (Not Supported)
+	Standard Controls: 2 Private Controls: 2
+
+Format ioctls:
+		info: found 2 formats for buftype 11
+	test VIDIOC_ENUM_FMT/FRAMESIZES/FRAMEINTERVALS: OK
+	test VIDIOC_G/S_PARM: OK (Not Supported)
+	test VIDIOC_G_FBUF: OK (Not Supported)
+	test VIDIOC_G_FMT: OK
+	test VIDIOC_TRY_FMT: OK
+		info: Global format check succeeded for type 11
+	test VIDIOC_S_FMT: OK
+	test VIDIOC_G_SLICED_VBI_CAP: OK (Not Supported)
+	test Cropping: OK (Not Supported)
+	test Composing: OK (Not Supported)
+	test Scaling: OK (Not Supported)
+
+Codec ioctls:
+	test VIDIOC_(TRY_)ENCODER_CMD: OK (Not Supported)
+	test VIDIOC_G_ENC_INDEX: OK (Not Supported)
+	test VIDIOC_(TRY_)DECODER_CMD: OK (Not Supported)
+
+Buffer ioctls:
+	test VIDIOC_REQBUFS/CREATE_BUFS/QUERYBUF: OK (Not Supported)
+	test VIDIOC_EXPBUF: OK (Not Supported)
+	test Requests: OK (Not Supported)
+
+Total for cx88_sdr device /dev/swradio0: 44, Succeeded: 44, Failed: 0, Warnings: 0

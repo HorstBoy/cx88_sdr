@@ -1,0 +1,8 @@
+
+Status Log:
+
+   [ 1924.833153] CX2388x SDR [0]: =================  START STATUS  =================
+   [ 1924.833154] v4l2-ctrls: CX2388x SDR [0]: Gain: 0
+   [ 1924.833155] v4l2-ctrls: CX2388x SDR [0]: Input: Input 2
+   [ 1924.833156] v4l2-ctrls: CX2388x SDR [0]: Sampling Rate: 28.636363 MHz, 8-bit
+   [ 1924.833157] CX2388x SDR [0]: ==================  END STATUS  ==================
